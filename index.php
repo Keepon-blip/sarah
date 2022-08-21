@@ -1,0 +1,284 @@
+<?php
+$server = "localhost";
+$username = "root";
+$password = "";
+$database = "projects";
+
+$connect = mysqli_connect($server, $username, $password, $database);
+
+if ( isset($_POST['submitButton']) )
+{
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+}
+
+$sqlSubmit = mysqli_query($connect, "INSERT INTO physio(fullname,email,subject,message) VALUES($fullname, $email, $subject, $message)");
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sarah The Physiotherapist</title>
+</head>
+<body>
+    <div class="row text-center pt-4" style="background-color: #EEFAF7;">
+        <h3>Sarah The Physiotherapist</h3>
+    </div>
+    <div class="row text-center" style="background-color: #EEFAF7;">
+        <nav>
+            <ul class="nav justify-content-center mb-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="book.html">Book</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 text-center pt-5">
+                <div class="intro-text">
+                    <h4 class="text-capitalize" style="font-size: 40px;">Have a nagging pain that won't go away???</h4>
+                    <p>Here's a chance to live pain free!</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="images/myofascial.jpg" alt="" width="600">
+            </div>
+        </div>
+        
+    </div>
+    <div class="container-fluid">
+        <div class="row text-center spec pt-4 pb-4">
+            <h3 class="text-capitalize">Specialized Physiotherapist in...</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Musculo-skeletal Pain</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Sports Injuries</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Post Surgery Rehabilitation</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Posture Education and Correction</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Electrotherapy</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <a href="" class="btn btn-primary float-end btn-lg">Book Now!</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Arthritis Pain</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Generalized Bodily Physical Assessment for Injury</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Post Stroke Rehabilitation</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Graded Exercise Therapy</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <div class="card mb-3 mt-3">
+                    <div class="card-header">Rehabilitation for Bed Ridden Patients</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
+                </div>
+                <a href="" class="btn btn-primary btn-lg">Call</a>
+            </div>
+        </div>
+        <div class="row text-center pt-5 medesc">
+            <h4 class="pt-5">About Me...</h4>
+            <p class="pt-3">Specialized Physiotherapist with 10 years experience, currently working at PolyCare, Lavington Mall. My goal as a physiotherapist is to restore your strength, mobility, function, and a new life—pain free. In all my working years, I have strived to be the caring hands you deserve and to be the place where you feel the change.</p>
+        </div>
+    </div>
+    <div class="g-container">
+        <div class="gallery-container w-2 h-2">
+            <div class="gallery-item">
+                <div class="image">
+                    <img src="images/img1.jpg" alt="physiotherapist">
+                </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img2.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img3.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container h-2">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img4.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img5.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container h-2">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img6.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img10.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+    
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img8.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container h-2">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img9.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img7.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container h-2">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img11.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img12.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+            <div class="image">
+                <img src="images/img13.jpg" alt="physiotherapist">
+            </div>
+            <div class="text">Healing</div>
+        </div>
+        </div>
+    
+    
+    </div>
+    <div class="container pt-5 text-center">
+        <div class="card text-center w-75">
+            <div class="card-body">
+                <h3>Clinics Hours</h3>
+                <h4>We’re Here When You Need Us</h4>
+                <h5>Monday-Friday : 8.00 am - 5.00 pm</h5>
+                <h5>Saturday : 8.00 - 12.00 pm</h5>
+                <h5>Sunday : Closed</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-5">
+        <div class="card cont-card">
+            <div class="card-body">
+                <div class="container">
+                    <div class="row text-center">
+                        <h4 class="pt-5">Contact Us</h4>
+                        <h4>Tel: +254 722 758 907</h4>
+                    </div>
+                    <form action="index.php" method="POST" class="contact-form pt-5">
+                        <div class="row mb-3">
+                            <input type="text" name="fullname" class="cf-text" placeholder="Full Name...">
+                        </div>
+                        <div class="row mb-3">
+                            <input type="email" name="email" class="cf-text" placeholder="Email Address...">
+                        </div>
+                        <div class="row mb-3">
+                            <input type="text" name="subject" class="cf-text" placeholder="Subject...">
+                        </div>
+                        <div class="row">
+                            <textarea name="message" id="" cols="30" rows="10" class="cf-text mb-3" placeholder="Type your message..."></textarea>
+                        </div>
+                        <button type="submit" name="submitButton" class="btn btn-primary mt-4 btn-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
