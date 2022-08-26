@@ -1,22 +1,4 @@
-<?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$database = "projects";
 
-$connect = mysqli_connect($server, $username, $password, $database);
-
-if ( isset($_POST['submitButton']) )
-{
-    $fullname = $_POST['fullname'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-}
-
-$sqlSubmit = mysqli_query($connect, "INSERT INTO physio(fullname,email,subject,message) VALUES($fullname, $email, $subject, $message)");
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,13 +37,13 @@ $sqlSubmit = mysqli_query($connect, "INSERT INTO physio(fullname,email,subject,m
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 text-center pt-5">
+            <div class="col-lg-6 text-center pt-5 intro">
                 <div class="intro-text">
                     <h4 class="text-capitalize" style="font-size: 40px;">Have a nagging pain that won't go away???</h4>
                     <p>Here's a chance to live pain free!</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 intro-image">
                 <img src="images/myofascial.jpg" alt="" width="600">
             </div>
         </div>
@@ -77,48 +59,36 @@ $sqlSubmit = mysqli_query($connect, "INSERT INTO physio(fullname,email,subject,m
             <div class="col-lg-6">
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Musculo-skeletal Pain</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Sports Injuries</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Post Surgery Rehabilitation</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Posture Education and Correction</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Electrotherapy</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
-                <a href="" class="btn btn-primary float-end btn-lg">Book Now!</a>
             </div>
             <div class="col-lg-6">
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Arthritis Pain</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Generalized Bodily Physical Assessment for Injury</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Post Stroke Rehabilitation</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Graded Exercise Therapy</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
                 <div class="card mb-3 mt-3">
                     <div class="card-header">Rehabilitation for Bed Ridden Patients</div>
-                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut officia, corrupti numquam quas iure nisi beatae in dicta praesentium!</div>
                 </div>
-                <a href="" class="btn btn-primary btn-lg">Call</a>
             </div>
         </div>
         <div class="row text-center pt-5 medesc">

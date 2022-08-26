@@ -28,8 +28,8 @@ body{
     background-color: #EEFAF7;
 }
 .card-header {
-    background-color: #2A7C6F;
-    color: white;
+    background-color: #fff;
+    color: #2A7C6F;
 }
 .medesc {
     font-size: larger;
@@ -122,9 +122,9 @@ textarea.cf-text {
     grid-row: span 2;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:576px) {
     
-    .container {
+    .g-container {
         margin: 15px;
         grid-gap: 5px;
     }
@@ -134,17 +134,52 @@ textarea.cf-text {
     .gallery-item .image img {
         object-position: 50% 50%;
     }
+    .w-3{
+        grid-column: span 1;
+    }
     .w-2 {
         grid-column: span 1;
     }
     .h-2 {
         grid-row: span 1;
     }
-    .container {
+    .g-container {
         grid-auto-rows: 250px 300px;
 
     }
-    
+    .intro-image {
+        display: none;
+    }
+    .intro{
+        background-image: url(images/myofascial.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    .intro-text {
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(4px);
+        border-radius: 30px;
+        padding-top: 5%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .intro-image {
+        display: none;
+    }
+    .intro{
+        background-image: url(images/myofascial.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    .intro-text {
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(4px);
+        border-radius: 30px;
+        padding-top: 5%;
+    }
 }
 
 .header {
