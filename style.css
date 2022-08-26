@@ -127,6 +127,11 @@ textarea.cf-text {
     .g-container {
         margin: 15px;
         grid-gap: 5px;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .w-2 {
+        grid-column: span 1;
     }
     .gallery-item .image {
         border-radius: 2px;
@@ -134,15 +139,7 @@ textarea.cf-text {
     .gallery-item .image img {
         object-position: 50% 50%;
     }
-    .w-3{
-        grid-column: span 1;
-    }
-    .w-2 {
-        grid-column: span 1;
-    }
-    .h-2 {
-        grid-row: span 1;
-    }
+    
     .g-container {
         grid-auto-rows: 250px 300px;
 
@@ -251,6 +248,7 @@ textarea.cf-text {
     .main-content {
         margin-left: 50px;
     }
+    
 }
 @media (max-width: 575.98px) {
     .sidebar {
